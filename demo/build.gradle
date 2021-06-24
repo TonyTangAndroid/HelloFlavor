@@ -20,6 +20,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "client", "server"
+    productFlavors {
+        client1 {
+            dimension "client"
+            applicationIdSuffix ".client1"
+        }
+        client2 {
+            dimension "client"
+            applicationIdSuffix ".client2"
+        }
+        dev {
+            dimension "server"
+        }
+        staging {
+            dimension "server"
+        }
+        production {
+            dimension "server"
+        }
+    }
 }
 
 dependencies {
