@@ -53,7 +53,24 @@ android {
             dimension "server"
         }
     }
+
+    applicationVariants.all { variant ->
+        def name = variant.getName()
+        // Default values
+        variant.buildConfigField 'boolean', 'ENABLE_ANALYTICS', 'false'
+        // Specific values
+        if (name.contains("Dev")) {
+            variant.buildConfigField 'String', 'SUBDOMAIN', '"dev"'
+        } else if (name.contains("Staging")) {
+            variant.buildConfigField 'String', 'SUBDOMAIN', '"staging-api"'
+        } else if (name.contains("Production")) {
+            variant.buildConfigField 'String', 'SUBDOMAIN', '"api"'
+            variant.buildConfigField 'boolean', 'ENABLE_ANALYTICS', 'true'
+        }
+    }
 }
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
