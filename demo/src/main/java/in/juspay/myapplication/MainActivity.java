@@ -1,6 +1,6 @@
 package in.juspay.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.common.util.HelloUtil;
