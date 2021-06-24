@@ -31,6 +31,10 @@ android {
             dimension "client"
             applicationIdSuffix ".client2"
         }
+        mirror {
+            dimension "server"
+            matchingFallbacks = ['dev']
+        }
         dev {
             dimension "server"
         }
