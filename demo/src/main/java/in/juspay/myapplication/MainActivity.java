@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     TextView tv_hello =findViewById(R.id.tv_hello);
-    tv_hello.setText(HelloUtil.getMessage());
+    tv_hello.setText(HelloUtil.getMessage()+":"+BuildConfig.FLAVOR);
   }
 }
