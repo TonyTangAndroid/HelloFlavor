@@ -21,6 +21,14 @@ android {
         }
     }
 
+    //https://proandroiddev.com/advanced-android-flavors-part-4-a-new-version-fc2ad80c01bb
+    //Resolve library missing fallback.
+    //The first string given to the missingDimensionStrategy field is the dimension name.
+    // The following comma separated strings are the fallback values to be used in order.
+    defaultConfig{
+        missingDimensionStrategy 'app', 'app1'
+    }
+
     flavorDimensions "client", "server"
     productFlavors {
         client1 {
