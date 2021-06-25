@@ -20,8 +20,19 @@ android {
         }
     }
 
-    flavorDimensions "client", "server"
+    flavorDimensions "app", "client", "server"
     productFlavors {
+
+        app1 {
+            dimension "app"
+        }
+        app2 {
+            dimension "app"
+        }
+        app3 {
+            dimension "app"
+        }
+
         client1 {
             dimension "client"
         }
